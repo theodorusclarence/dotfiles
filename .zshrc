@@ -173,6 +173,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 source ~/.spaceshiprc.zsh
 
+# Make spaceship theme work in Warp
+SPACESHIP_PROMPT_ASYNC=FALSE
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/clarence/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/clarence/google-cloud-sdk/path.zsh.inc'; fi
 
