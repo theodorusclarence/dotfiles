@@ -129,6 +129,11 @@ alias gprm='git pull --rebase origin $(git_main_branch)'
 alias gprs='git pull --rebase origin staging'
 alias dg="pnpm db:generate"
 alias pdb="pnpm db:push"
+alias dbr="pnpm db:reset"
+alias kon="killall node"
+alias ip="ipconfig getifaddr en0"
+alias sl='url="http://$(ipconfig getifaddr en0):3000"; echo $url; printf "%s" "$url" | pbcopy'
+
 
 # GitHub Alias
 alias gprc="gh pr create"
@@ -137,6 +142,7 @@ alias gprp="gh pr create -w --body-file .github/pull_request_template.md"
 alias gprf="gh pr create -f"
 alias gis="gh issue create"
 alias gism="gh issue create -a 'theodorusclarence'"
+alias gpf='git push --force-with-lease --force-if-includes'
 
 # Flow Alias
 alias gcmr="bash /Users/Clarence/flow/main-and-delete-branch.sh"
@@ -153,6 +159,8 @@ alias brest="brew services start"
 
 # Dimension
 alias dwb="underpass -p 3001 -s dim"
+alias bd="pnpm build:dev"
+alias sd="pnpm start:dev"
 
 
 # Captive Apple
@@ -175,12 +183,17 @@ source ~/.spaceshiprc.zsh
 
 # Make spaceship theme work in Warp
 SPACESHIP_PROMPT_ASYNC=FALSE
+# Warpify zsh
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh" }}\x9c'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/clarence/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/clarence/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/clarence/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/clarence/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Rust
+. "$HOME/.cargo/env" 
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
