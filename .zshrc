@@ -45,6 +45,8 @@ ZSH_THEME="spaceship"
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
+SPACESHIP_TIME_SHOW=true
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
@@ -133,7 +135,7 @@ alias dbr="pnpm db:reset"
 alias kon="killall node"
 alias ip="ipconfig getifaddr en0"
 alias sl='url="http://$(ipconfig getifaddr en0):3000"; echo $url; printf "%s" "$url" | pbcopy'
-
+alias cb='git branch --show-current | pbcopy'
 
 # GitHub Alias
 alias gprc="gh pr create"
@@ -148,6 +150,7 @@ alias gpf='git push --force-with-lease --force-if-includes'
 alias gcmr="bash /Users/Clarence/flow/main-and-delete-branch.sh"
 alias gcsr="bash /Users/Clarence/flow/staging-and-delete-branch.sh"
 alias emr="bash /Users/Clarence/flow/git-emergency.sh"
+alias fc="bash /Users/Clarence/flow/fresh-chrome.sh"
 alias vc="/bin/bash '/Users/Clarence/flow/vc.sh'"
 alias gv="gh repo view --web"
 alias prv="gh pr view --web"
